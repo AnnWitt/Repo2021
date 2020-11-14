@@ -1,0 +1,12 @@
+Czym są obiekty? Na podstawie szablonu (klas) można tworzyć egzemplarze (instancje) klas. Instancje te będą zawierały pola zdefiniowane w
+obrębie klasy oraz można będzie na nich wywoływać zdefiniowane w tej klasie metody. Utworzone instancje klasy nazywamy właśnie obiektami.
+Ważne jest zatem zapamiętać, jaka jest zasadnicza różnica pomiędzy obiektem a klasą: jeśli posłużylibyśmy się przykładem klasy Car, to klasa
+jest niczym innym jak zestawem cech reprezentujących jakiś samochód oraz czynnościami możliwymi do wykonania (metodami). Obiektem jest konkretny
+egzemplarz tej klasy, czyli np. samochód marki Mercedes, który jest koloru białego i rozwijający maksymalną prędkość 250km/h. Przechodzimy zatem do
+procesu tworzenia instancji danej klasy.
+
+Klasy posiadają dwie podstawowe składowe:
+
+pola - to nic innego, jak wcześniej poznane przez nas zmienne. Jest to także cecha opisująca obiekt danej klasy.
+metody - przez metodę rozumiemy operację, jaką udostępnia nasza klasa dla świata zewnętrznego i jak należy z niej korzystać.
+Podsumowując: klasa to schemat, na który składają się zdefiniowane w niej pola oraz metody.

@@ -1,0 +1,63 @@
+2:08
+Napisać klase Caretaker (opiekun) która będzie mieć pola
+- name,
+- surname,
+- age
+- Liste obietow typu Animal - sa to zwierzata w schronisku ktorymi opiekuje sie dana osoba
+Klasa powinna mieć Konstruktory: pusty, oraz przyjmujacy  imie, nazwisko i wiek. Klasa Caretaker powinna miec metodę
+registerAnimal która dodaje do listy zwierzat kolejne zwierze, którym danym opiekun ma sie opiekowac oraz !!!! ustawia zwierzeciu danego opieuna.
+Stworzyć klase Animal ktora ma:
+id
+name
+cageNumber (numer klatki).
+Caretaker (swojego opiekuna)
+klasa powinna mieć odpowiedni konstruktor oraz getery i setery.
+
+//
+
+co do tego
+12:29
+public void registerAnimal(Animal zwierze) {
+    zwierzeta.add(zwierze);
+    zwierze.setOpiekun(this); // --->
+}
+12:29
+metoda setOpiekun
+12:29
+powinna zwierzęciu ustawić opiekuna
+12:29
+więc moglibyśmy tak:
+12:30
+Caretaker car = new Caretaker();
+zwierze.setOpiekun(car);
+12:31
+ale w tym przypadku jesteśmy w klasie Caretaker więc this odnosi się do tego Caretaker w którym jesteśmy
+12:32
+i jego chcemy ustawić jako Opiekuna tego zwierzęcia
+
+Anna Wittmann  12:58 PM
+Czyli jeżeli  podsumowujac static oznacza że jest jedno pole dla wszystkich obiektów i one z niego korzystają w relacji 1-n (n obiektów)
+A jeżeli jest bez statica to mamy 1:1 i każdy obiekt ma swój własny, nie dzielony z innym nextid i wyświetlenie każdego kolejnego obiektu
+na taki sam wynik tj 0 + 1 =1 i dalsze zwiększenie już nic nie daje bo skonczylismy już z tym obiektem A następny sobie zacznie od początku
+ze "swoim własnym, tylko swoim" id ?
+
+//
+
+:29
+public void registerAnimal(Animal zwierze) {
+    zwierzeta.add(zwierze);
+    zwierze.setOpiekun(this); // --->
+}
+12:29
+metoda setOpiekun
+12:29
+powinna zwierzęciu ustawić opiekuna
+12:29
+więc moglibyśmy tak:
+12:30
+Caretaker car = new Caretaker();
+zwierze.setOpiekun(car);
+12:31
+ale w tym przypadku jesteśmy w klasie Caretaker więc this odnosi się do tego Caretaker w którym jesteśmy
+12:32
+i jego chcemy ustawić jako Opiekuna tego zwierzęcia

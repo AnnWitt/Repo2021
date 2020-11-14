@@ -1,0 +1,164 @@
+public static void main(String[] args) {
+    ArrayList<String> lista = new ArrayList();
+    String[] tablicaS;
+    lista.add("Sebastia");
+    lista.add("Marian");
+    lista.add("Marian");
+    lista.add("Marian");
+    lista.remove("Marian");
+    lista.get(10);
+    for(int i = 0; i < lista.size(); i++) {
+        System.out.println(lista.get(i));
+    }
+    for(String s : lista) {
+        System.out.println(s);
+    }
+}
+
+Tomasz Konieczek - trener  3:37 PM
+public static void main(String[] args) {
+    Aniaml a1 = new Aniaml("Reksio", "10", 6);
+    Aniaml a2 = new Aniaml("Mruczek", "11", 5);
+    Aniaml a3 = new Aniaml("Pigi", "11", 4);
+    Caretaker caretaker = new Caretaker("Mariola", "Marek", 30);
+    caretaker.registerAnimal(a1);
+    caretaker.registerAnimal(a2);
+    caretaker.registerAnimal(a3);
+    System.out.println("fasdfas");
+    a1.getCaretaker().setName("Zdzichu");
+    a2.getCaretaker().setName("Maniek");
+    a3.getCaretaker().setName("Boguslawa");
+    System.out.println(a1.getCaretaker().getName());
+    System.out.println(a2.getCaretaker().getName());
+    System.out.println(a3.getCaretaker().getName());
+    System.out.println(caretaker.getName());
+}
+3:37
+public class Caretaker {
+    private String name;
+    private String surname;
+    private int age;
+    private ArrayList<Aniaml> animals = new ArrayList<>();
+    public Caretaker(String name, String surname, int age) {
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
+    }
+    public void registerAnimal(Aniaml animal) {
+        animals.add(animal);
+        animal.setCaretaker(this);
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public String getSurname() {
+        return surname;
+    }
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+    public int getAge() {
+        return age;
+    }
+    public void setAge(int age) {
+        this.age = age;
+    }
+    public ArrayList<Aniaml> getAnimals() {
+        return animals;
+    }
+}
+
+package pl.sda;
+import java.util.ArrayList;
+public class Caretaker {
+    private String name;
+    private String surname;
+    private int age;
+    private ArrayList<Aniaml> animals = new ArrayList<>();
+    public Caretaker(String name, String surname, int age) {
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
+    }
+    public void registerAnimal(Aniaml animal) {
+        animals.add(animal);
+        animal.setCaretaker(this);
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public String getSurname() {
+        return surname;
+    }
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+    public int getAge() {
+        return age;
+    }
+    public void setAge(int age) {
+        this.age = age;
+    }
+    public ArrayList<Aniaml> getAnimals() {
+        return animals;
+    }
+    @Override
+    public String toString() {
+        String name = this.name + "\n";
+        String animalss = "";
+        for (Aniaml o : this.animals) {
+            animalss += "    " +o.getName() + "\n";
+        }
+        return  name + animalss;
+    }
+}
+3:48
+package pl.sda;
+public class Aniaml {
+    private static int nextId;
+    private int id;
+    private String name;
+    private String age;
+    private int cageNumber;
+    private Caretaker caretaker;
+    public Aniaml(String name, String age, int cageNumber) {
+        id = nextId;
+        nextId++;
+        this.name = name;
+        this.age = age;
+        this.cageNumber = cageNumber;
+    }
+    public int getId() {
+        return id;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public String getAge() {
+        return age;
+    }
+    public void setAge(String age) {
+        this.age = age;
+    }
+    public int getCageNumber() {
+        return cageNumber;
+    }
+    public void setCageNumber(int cageNumber) {
+        this.cageNumber = cageNumber;
+    }
+    public Caretaker getCaretaker() {
+        return caretaker;
+    }
+    public void setCaretaker(Caretaker caretaker) {
+        this.caretaker = caretaker;
+    }
+}
