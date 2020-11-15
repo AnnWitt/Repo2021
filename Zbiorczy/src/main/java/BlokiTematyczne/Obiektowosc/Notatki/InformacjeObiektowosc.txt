@@ -1,0 +1,22 @@
+- Klasa jest szablonem konstrukcji obiektu.
+- Obiekty są instancjami klasy
+- Zmienne i metody są składowymi klasy
+- Sens wywolywania z maina innej klasy - teoretycznie moznaby wywolywac z wielu innych klas obiekty tej klasy.
+Nie bedzie tu koniecznosci np definiowania
+- Dwóch obiektów nie łączy nic poza przynależnoscią do tej samej klasy (np. suv i minivan w klasie vehicle).
+Każdy z nich ma własny zestaw zmiennych (choc takich samych jeżeli chodzi o sturkturę)
+- deklaracja referencji + utworzenie obiektu Vehicle (new)
+Vehicle minivan=new Vehicle();  <=to samo=> Vehicle.minivan;   minivan=new Vehicle();
+
+Vehicle.minivan;   --> deklaracja referencji do obiektu TYPU Vehicle || JESZCZE NIE JEST OBIEKTEM
+minivan=new Vehicle(); --> Utworzenie obiektu klasy Vehicle z przypisaną referencją do minivan
+
+Vehicle car1= new Vehicle();
+Vehicle car2=car1;
+Zmienne car1,car2 Referencje do tego samego obiektu (ale nie sa powiazane w inny sposob) analogicznie to
+String dowolny=dowolny2
+
+A Java String is an object of the class java. ... You can assign a string literal directly into a
+String variable, instead of calling the constructor to create a String instance.
+
+str 102 - metody
