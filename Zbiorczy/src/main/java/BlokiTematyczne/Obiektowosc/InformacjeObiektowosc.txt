@@ -1,1 +1,1 @@
-Klasa jest szablonek obiektu.
+Klasa jest szablonem obiektu.
