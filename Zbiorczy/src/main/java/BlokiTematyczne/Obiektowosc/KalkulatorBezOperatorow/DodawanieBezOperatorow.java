@@ -1,6 +1,6 @@
 package BlokiTematyczne.Obiektowosc.KalkulatorBezOperatorow;
 
-public class DodawanieBezPlusa {
+public class DodawanieBezOperatorow {
 
    /* WAGA 3 !!!!!!! przy rozwiązaniu zadania WOLNO korzystać TYLKO ! z operatorów i++, ++i, i--, --i -
     NIE WOLNO KORZYSTAĆ Z innych operatorów arytmetycznych tj. +, -, *, /, %*/

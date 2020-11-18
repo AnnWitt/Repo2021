@@ -1,24 +1,20 @@
 package BlokiTematyczne.Obiektowosc.KalkulatorBezOperatorow;
 
-public class OdejmowanieBezMinusa {
+public class OdejmowanieBezOperatorow {
 
     public static void main(String[] args) {
 
-        int a = 10, b = 60;
+        int a = 100, b = 60;
 
-        if (a > b) {
-            a = a + b;
-            b = a - b;
-            a = a - b;
-        }
+
         System.out.println(a + " - " + b);
 
-        while (a > 0) {
+        while (b > 0) {
             a--;
             b--;
         }
 
-        int wynik = b;
+        int wynik = a;
         System.out.println(wynik);
 
     }
