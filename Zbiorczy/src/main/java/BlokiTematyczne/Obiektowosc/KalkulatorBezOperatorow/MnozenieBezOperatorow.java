@@ -3,8 +3,8 @@ package BlokiTematyczne.Obiektowosc.KalkulatorBezOperatorow;
 public class MnozenieBezOperatorow {
     public static void main(String[] args) {
 
-        int liczba = 3, mnoznik = 3;
-        int doLiczby = liczba;
+        int liczba = 27, mnoznik = 3;
+        int doLiczby;
         int cykl = liczba;
 
         while (mnoznik > 1) {
