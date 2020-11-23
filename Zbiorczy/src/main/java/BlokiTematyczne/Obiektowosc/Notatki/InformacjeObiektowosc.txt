@@ -19,4 +19,23 @@ String dowolny=dowolny2
 A Java String is an object of the class java. ... You can assign a string literal directly into a
 String variable, instead of calling the constructor to create a String instance.
 
-str 102 - metody
+- metoda zawiera jedną lub więcej instrukcji (podprogram) -
+najlepiej jakby sama w sobie wykonywala jedno zadanie
+- main - metoda rozpoczynająca działanie programu. Ona będzie wywolywac nasze metody
+- postać metodyL typZwracany nazwa)lista parametrów {ciało metody} np int Matematyczna(int a, int b)
+- jeżeli metoda nie zwraca zadnych danych to typ-zwracany to void,
+- metody służą do uzyskania dostępu do danych klasy i wykonania operacjy na tych danych
+- Zwrocenie wartosci metody - return
+- return w voidzie spowoduje zakonczenie metody np if (x==3) {return;} // koniec jezeli ystapi 3
+np for (int i=0;i>10;i++) { if (i==5) return; sout;} - wykona sie tylko od 0 do 5 bo dla = 5 powrot z metody
+Moze byc wiecej niz jedno return jeżeli wiecej rozgalezien
+- metody zwracajace wartosc ( np sqrt()) -> return wartosc (musi byc typ metody inny niz void)
+- wartosci przekazywane metodzie to argumenty, zmienne w metodzie (wewnatrz), które je otrzymują
+to parametry (deklarujemy je w () po nazwie metody)
+
+
+str 113 Konsturktory
+
+
+
+
