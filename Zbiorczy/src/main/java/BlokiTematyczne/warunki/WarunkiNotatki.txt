@@ -1,0 +1,13 @@
+Ciekawostka - operator ?
+
+if (val<0) {
+absval=-val;
+} else {
+absval=val;
+}
+
+to samo uzyskamy za pomocą
+absval=val<0 ? -val : val;
+
+struktura: wyrażenie 1 ? Wyrazenie 2 : Wyrazenie 3
+Wyrazenie 1 typu boolean -> jezeli true to warunek 2 jezeli false to warunek 3

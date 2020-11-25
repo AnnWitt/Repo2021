@@ -12,6 +12,7 @@ public class KopiowanieTablic {
         tablicaSkopiowana[3] = 10;
         System.out.println("Oryginalna, 4 element: " + tablicaOryginalna[3]); //Oryginalna, 4 element: 10
         System.out.println("Kopia, 4 element: " + tablicaSkopiowana[3]); //Kopia, 4 element: 10
+        //powstaje referencja - zmiana w oryginalnej powoduje zmiane w kopii
         System.out.println();
         System.out.println("element po elemencie");
         int[] oryginal = {1, 2, 3, 4};
@@ -33,6 +34,6 @@ public class KopiowanieTablic {
         System.out.println(kopia2[2]);//ok
         kopia2[2]=100;
         System.out.println("oryginal " + oryginal[2]);//ok
-        System.out.println("kopia +100" + kopia2[2]);//ok
+        System.out.println("kopia +100 " + kopia2[2]);//ok
     }
 }

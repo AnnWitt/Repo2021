@@ -33,9 +33,32 @@ Moze byc wiecej niz jedno return jeżeli wiecej rozgalezien
 - wartosci przekazywane metodzie to argumenty, zmienne w metodzie (wewnatrz), które je otrzymują
 to parametry (deklarujemy je w () po nazwie metody)
 
+klasa vs obiekt - wzorzec, mysl o tym jak foremka do piasku i babki piaskowe
 
-str 113 Konsturktory
+- Konstruktor - inicjacja obiektu podczas tworzenia
+- ma taką samą nazwę jak klasa, nie mają typu zwracanego
+- zwykle nadaje wartosci poczatkowe zmiennym
+- zmienna = new nazwaKlasy (lista argumentow) <-- okreslenie konsturktora klasy
+- jezeli klas anie ma oknstruktora ot java korzystaz z domyslnego
+
+- MEtoda finalize() wywolywana przed odzyskaniem pamieci zajmowanej przez obiekt, któy zostanie usuniety
+protected void finalize() {}
+
+- this - >
+int xxx;
+PrzykladowyKonsturktor (int xxx) {
+ this.xxx=xxx; --> do xxx zadeklarowanego w klasie przypisujemy argument
+}
+
+- Obiekty klasy string np String  str1=new String("Cokolwiek");
+String str2="ddddddddddd";
+
+//Operacje na łancuchach
+- boolean equals(string) - zwracsa true jezeli lancuch dla którego zostala wywolana jest taki sam jak string
+
+w klasie powtorki sporo tego jest
+
+lancuchy sa niezmienne: jesli sie przypisze wartosc to powstaje nowy obiekt. Nieuzwane sa usuwane z pamieci
 
 
-
-
+//dalej 159 wiecej o metodach i klasach

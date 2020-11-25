@@ -1,0 +1,10 @@
+- tablica to kolekcja zmiennych tego samego typu,odwolanie za pomoca wspolnej nazwy T[i]
+- tablice zostały zaimplementowane jako obiekty
+- int [] tablica=new int[rozmiar] lub int[] tablica=new int[]{3,4,5}
+- tablica dwuwymiarowa -> int table[][]=new int[3][6] -> dostep table[1][0]=4
+tablica[2][3] to tablica[rzad][kolumna]
+- tablice nieregularne int table[][]=new int[3][]; -> przydziela pamiec dla pierwszego wymiaru
+dla drugiego przydzielona recznie w kolejnych istrukcjach
+- METODA ZWRACAJĄCA TABLICĘ: int[] someMeth() {...}
+- FOR EACH: fot (typ jakaszmienna: nazwa_tablicy) { blok instrukcji nt sout("xxx" + jakaszmienna) }
+

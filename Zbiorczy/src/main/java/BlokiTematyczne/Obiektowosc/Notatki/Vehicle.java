@@ -41,6 +41,11 @@ class MainVehicle {
 
         System.out.println("na ile km minivan " + minivan.fuelneeded(150) + " na ile sportcar " + sportscar.fuelneeded(150));
 
+        System.out.println();
+        System.out.println("Konsturktory itd");
+        Vehicle k1=new Vehicle(3,65,9.1);
+        System.out.println(k1.fuelneeded(150));
+
     }
 }
 
@@ -66,6 +71,17 @@ class Vehicle {
 
     }
 
+    Vehicle() {
+        System.out.println("cokolwiek");
+    }
+
+    Vehicle(int p, int f, double l) {
+        passengers = p;
+        fuelcap = f;
+        lkm = l;
+    }
+
+
 
 // koniec Vehicle
 }
@@ -79,3 +95,34 @@ class ChkNum {
         }
     }
 }
+
+/////Konstruktory////////////
+
+//-------wywolanie
+class MyClassMain {
+    public static void main(String[] args) {
+        MyClass t1=new MyClass();
+        MyClass t2=new MyClass();
+        MyClass t3=new MyClass(4);
+
+        System.out.println("t1.x " + t1.x + " t2.y " + t2.y + " t3.x " + t3.x);
+    }
+}
+
+
+
+//----------- klasa z konsturktorami
+class MyClass {
+    int x; //zmienne do wywolania w klasie main
+    int y;
+    //konstruktor - public (brak typu) nazwa - () brak argumentow
+    MyClass() {
+        x=10;
+        y=30;
+    }
+
+    MyClass(int i) {
+        x=i*10;
+    }
+}
+
