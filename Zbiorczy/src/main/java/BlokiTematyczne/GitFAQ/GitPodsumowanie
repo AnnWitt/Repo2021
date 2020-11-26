@@ -126,3 +126,10 @@ po zmianach -> git rebase --continue
 widoczna jako odgałęzienie wyprowadzone z jej jej aktualnego HEADa.
 Można anulować poprzez git rebase --abort
 - git reset --hard orig_head Powrót do stanu sprzed zakończonego właśnie rebase (dziala tez na merge)
+
+##IntelliJ problemy z ls -la##
+https://stackoverflow.com/questions/49032646/ls-is-not-recognized-as-an-internal-or-external-command-operable-program-or-b?rq=1
+używac dir zamiast ls -la
+
+##usuwanie repozytorium / katalogu ##
+rm -rf .git
