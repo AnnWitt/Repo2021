@@ -1,4 +1,4 @@
-package Z_20201024.pkg.KopiaSamPrez.pkg;
+package BlokiTematyczne.Obiektowosc.KopiaSamPrez;
 
 public class Z1Zwierze {
 

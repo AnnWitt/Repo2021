@@ -1,4 +1,4 @@
-package Z_20201024.pkg.Caretaker.pkg;
+package BlokiTematyczne.Obiektowosc.Caretaker;
 
 public class Animal {
 
