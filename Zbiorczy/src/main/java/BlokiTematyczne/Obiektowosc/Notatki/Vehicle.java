@@ -43,7 +43,7 @@ class MainVehicle {
 
         System.out.println();
         System.out.println("Konsturktory itd");
-        Vehicle k1=new Vehicle(3,65,9.1);
+        Vehicle k1 = new Vehicle(3, 65, 9.1);
         System.out.println(k1.fuelneeded(150));
 
     }
@@ -66,8 +66,8 @@ class Vehicle {
         return (int) (fuelcap / lkm * 100);
     }
 
-    double fuelneeded (int km) {
-     return (double) km/100*lkm;
+    double fuelneeded(int km) {
+        return (double) km / 100 * lkm;
 
     }
 
@@ -80,7 +80,6 @@ class Vehicle {
         fuelcap = f;
         lkm = l;
     }
-
 
 
 // koniec Vehicle
@@ -101,28 +100,60 @@ class ChkNum {
 //-------wywolanie
 class MyClassMain {
     public static void main(String[] args) {
-        MyClass t1=new MyClass();
-        MyClass t2=new MyClass();
-        MyClass t3=new MyClass(4);
+        MyClass t1 = new MyClass();
+        MyClass t2 = new MyClass();
+        MyClass t3 = new MyClass(4);
 
-        System.out.println("t1.x " + t1.x + " t2.y " + t2.y + " t3.x " + t3.x);
+        System.out.println("t1.x " + t1.x + " t2.y " + t2.getY() + " t3.x " + t3.x + " t3.z gdzie z static " + t3.getZ());
     }
 }
-
 
 
 //----------- klasa z konsturktorami
 class MyClass {
-    int x; //zmienne do wywolania w klasie main
-    int y;
+    public int x; //zmienne do wywolania w klasie main
+    private int y;
+    private static int z = 40;
+
     //konstruktor - public (brak typu) nazwa - () brak argumentow
     MyClass() {
-        x=10;
-        y=30;
+        x = 10;
+        y = 30;
+        z = getZ(); //ciekawostka -> wyjdzie 43 na koniec bo po kazdym prxejsciu przez to getter zwieksza o jeden
     }
 
     MyClass(int i) {
-        x=i*10;
+        x = i * 10;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setY(int y) { //daję set 10
+        //y = y+1; // y =30
+        this.y = y+1; // y =11
+    }
+
+    public static int getZ() {
+        return z + 1;
+    }
+
+    public static void setZ(int z) {
+        MyClass.z = z + 10;
     }
 }
 
+//masowe definiowanie obiektów (gorzej, że tylko w pętli można z nich korzystać
+class TestDeklaracjiIteracja {
+
+    public static void main(String[] args) {
+
+        for (int i = 1; i < 11; i++) {
+            MyClass ti = new MyClass();
+            ti.setY(10);
+            System.out.println("iteracja " + i + " " + ti.getY());
+        }
+
+    }
+}

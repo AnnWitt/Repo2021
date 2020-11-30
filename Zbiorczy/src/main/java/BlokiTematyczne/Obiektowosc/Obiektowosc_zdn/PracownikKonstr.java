@@ -1,4 +1,4 @@
-package BlokiTematyczne.Obiektowosc.Obiektowosc_zdn.pkg;
+package BlokiTematyczne.Obiektowosc.Obiektowosc_zdn;
 
 public class PracownikKonstr {
     //Zadanie 1//

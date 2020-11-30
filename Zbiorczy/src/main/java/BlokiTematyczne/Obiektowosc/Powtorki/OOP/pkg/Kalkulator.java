@@ -1,9 +1,8 @@
 package BlokiTematyczne.Obiektowosc.Powtorki.OOP.pkg;
 
-import Z_20201024.pkg.Caretaker.pkg.Animal; //import z innego pakietu
-
 import static java.lang.Math.min;
 
+import BlokiTematyczne.Obiektowosc.Caretaker.Animal;//import z innego pakietu
 import BlokiTematyczne.Obiektowosc.Samochod;
 
 public class Kalkulator {

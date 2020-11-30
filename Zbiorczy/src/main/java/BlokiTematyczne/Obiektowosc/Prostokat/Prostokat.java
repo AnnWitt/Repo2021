@@ -1,4 +1,4 @@
-package BlokiTematyczne.Obiektowosc.Prostokat.pkg;
+package BlokiTematyczne.Obiektowosc.Prostokat;
 
 public class Prostokat {
     public static void main(String[] args) {

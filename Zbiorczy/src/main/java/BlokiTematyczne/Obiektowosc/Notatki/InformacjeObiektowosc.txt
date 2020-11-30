@@ -61,4 +61,13 @@ w klasie powtorki sporo tego jest
 lancuchy sa niezmienne: jesli sie przypisze wartosc to powstaje nowy obiekt. Nieuzwane sa usuwane z pamieci
 
 
+//Modyfikatory dostępu
+- public - dostpena dla dowolnego kodu w programie w tym metod z innych klas
+- private - dosteplna dla skladowych tej samej klasy. Metody zdefiniowane w inncyh klasach nie maja dostepu
+- protected - (dziedziczenie - do uzupelnienia pozniej)
+- default (jesli brak powyzszych) - roznowazny z public chyba, ze kod został podzielony na pakiety.
+
+Pakiet: grupa klas
+
+
 //dalej 159 wiecej o metodach i klasach
