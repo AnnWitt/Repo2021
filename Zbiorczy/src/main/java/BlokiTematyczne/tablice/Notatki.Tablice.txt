@@ -8,3 +8,18 @@ dla drugiego przydzielona recznie w kolejnych istrukcjach
 - METODA ZWRACAJĄCA TABLICĘ: int[] someMeth() {...}
 - FOR EACH: fot (typ jakaszmienna: nazwa_tablicy) { blok instrukcji nt sout("xxx" + jakaszmienna) }
 
+- Metoda zwracajaca tablice i jej dalsze wykorzystanie:
+
+    public static int[] TblVarargs(int... tn) {
+       int[] tZwrot = tn;
+        System.out.println("wyswietlam kolejne elementy tablicy ");
+        for (int i = 0; i < tn.length; i++) {
+            System.out.println((i+1) + " Argument zmienny " + tn[i] * 10);
+        }
+        return tZwrot;
+
+        a w main
+
+        int[] KopiaTblVarargs=Zaczyty.TblVarargs(1,2,3).clone(); //!!!!!!!!!!!!!
+        System.out.println("proba kopii tablicy z metody varargs " + KopiaTblVarargs[2] + " yeee działa");
+test = Zad6(liczby); //referencja !!!

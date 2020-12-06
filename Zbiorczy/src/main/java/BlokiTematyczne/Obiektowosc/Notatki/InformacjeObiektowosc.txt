@@ -23,7 +23,7 @@ String variable, instead of calling the constructor to create a String instance.
 najlepiej jakby sama w sobie wykonywala jedno zadanie
 - main - metoda rozpoczynająca działanie programu. Ona będzie wywolywac nasze metody
 - postać metodyL typZwracany nazwa)lista parametrów {ciało metody} np int Matematyczna(int a, int b)
-- jeżeli metoda nie zwraca zadnych danych to typ-zwracany to void,
+- jeżeli metoda nie zwraca zadnych danych to typ-zwracany to void (np tylko wyswietla zmienne, nie korzystamy znich dalej)
 - metody służą do uzyskania dostępu do danych klasy i wykonania operacjy na tych danych
 - Zwrocenie wartosci metody - return
 - return w voidzie spowoduje zakonczenie metody np if (x==3) {return;} // koniec jezeli ystapi 3
@@ -69,5 +69,45 @@ lancuchy sa niezmienne: jesli sie przypisze wartosc to powstaje nowy obiekt. Nie
 
 Pakiet: grupa klas
 
+Wykorzystanie obiektu jako parametru:
 
-//dalej 159 wiecej o metodach i klasach
+
+Sterta vs stos -!!!!!!!!!!!
+Sytuacja przypisania nowej instancji obiektu do istniejącej zmiennej - przepiecie do innego miejsca na stercie
+(referencja do nowego obiektu, innego miejsca w pamieci)
+- sterta (heap space) - obiekty trzymane są na stercie. Miejsce na obiekty są rezerwowane (i ew zwalniane) w tej pamieci.
+- stos (stack) - zmienne trzymane są na stosie. Nie wszystkie zmienne wskazują na obiekty na stercie. Jeśli utworzysz
+zmienną lokalną (nie będącą atrybutem klasy) typu prostego (np. int czy double) wylądują one bezpośrednio na stosie
+
+Gettery i settery to metody
+- metody pobierające wartość atrybutu mają nazwę get typ zwracany odpowiada typowi atrybutu.
+Metoda nie przyjmuje żadnego parametru.
+Specyfikacja dopuszcza pewien wyjątek w nazwie jeśli atrybut jest typu boolean
+- metoda ustawiająca wartość atrybutu. Nową wartością jest parametr przekazany do tej metody.
+Nazwa metody musi pasować do wzorca set. Metoda musi przyjmować jeden parametr odpowiadający
+typowi atrybutu i nie może zwracać żadnej wartości.
+
+
+Klasy Zewnetrzne i wewnetrzne
+public class OuterClass {
+   public class InnerClass {
+   }
+
+   public InnerClass instantiate() {
+   return new InnerClass();
+   }
+}
+klasa wewnętrzna ma dostęp do wszystkich atrybutów czy metod klasy zewnętrznej, w której została zdefiniowana.
+Tworzenie instancji
+
+private static void innerClassInstantiation() {
+OuterClass outerClass=new OuterClass();
+OuterClass.InnerClass inst1=outerClass.instantiate(); //powstaje w wyniku wywołania metody instantiate z klasy OuterClass
+OuterClass.InnerClass inst2=outerClass.new InnerClass(); //tworzymy posługując się instancją klasy OuterClass
+}
+
+Static/Nonstatic -> domyślnie, wszystkie wewnętrzne interfejsy i typy wyliczeniowe są statyczne,
+modyfikator static jest przed nimi zbędny
+
+https://www.samouczekprogramisty.pl/klasy-wewnetrzne-i-anonimowe-w-jezyku-java/
+//dalej 166 wiecej o metodach i klasach

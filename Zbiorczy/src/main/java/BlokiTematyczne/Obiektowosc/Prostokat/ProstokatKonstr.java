@@ -24,6 +24,11 @@ public class ProstokatKonstr {
         this.wysokosc = wysokosc;
     }
 
+    public ProstokatKonstr(int szerokosc) {
+        this.szerokosc = szerokosc;
+        wysokosc = szerokosc;
+    }
+
     public ProstokatKonstr(int gora, int lewy) {
         this.gora = gora;
         this.lewy = lewy;
@@ -72,13 +77,5 @@ public class ProstokatKonstr {
     public void setWysokosc(int wysokosc) {
         this.wysokosc = wysokosc;
     }
-
-    public ProstokatKonstr(int szerokosc) {
-        this.szerokosc = szerokosc;
-        wysokosc=szerokosc;
-    }
-
-
-
 
 }

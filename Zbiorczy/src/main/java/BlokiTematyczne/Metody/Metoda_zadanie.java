@@ -16,7 +16,7 @@ public class Metoda_zadanie {
         zTablicy(liczby); //samo wywolanie, sout jest juz w metodzie
         System.out.println("Zwrocenie tablicy odwrotnej");
         //System.out.println(Zad6(liczby));
-        test = Zad6(liczby);
+        test = Zad6(liczby); //referencja !
 
         for (int i = 0; i < liczby.length; i++) {
             System.out.print(test[i] + " ");
@@ -94,6 +94,7 @@ public class Metoda_zadanie {
 
         int dl = liczby.length;
         int[] Revliczby = new int[dl];
+
         //int[] Revliczby=new int[]{5,5,5,5,6};
 
         for (int i = (dl - 1); i >= 0; i--) {

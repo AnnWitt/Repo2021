@@ -17,6 +17,7 @@ public class TablioceVarargs {
     static int var(int... n) { //do wyswietlenia w sout ew wykorzystanie dalej
         int suma = 0;
         for (int i = 0; i < n.length; i++) {
+            //System.out.println(n[i]);
             suma = suma + n[i];
         }
         return suma;

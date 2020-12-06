@@ -7,19 +7,25 @@ public class Zaczyty {
     }
 
 
-    public static int TblVarargs(int t0, int... tn) {
-        int tZwrot = t0;
+    public static int[] TblVarargs(int... tn) {
+
+       int[] tZwrot = tn;
         System.out.println("wyswietlam kolejne elementy tablicy ");
         System.out.println();
         for (int i = 0; i < tn.length; i++) {
-            System.out.println((i + 1) + " Argument zmienny " + tn[i] * 10);
+            System.out.println((i+1) + " Argument zmienny " + tn[i] * 10);
         }
         return tZwrot;
+        // int[] kopia2=oryginal.clone();
+
+
+    /*    int[] Revliczby = new int[dl];
+        return Revliczby;*/
     }
 
 
-    public static void TblVarargs_void(int t0, int... tn) {
-        int tZwrot = t0;
+    public static void TblVarargs_void(int... tn) {
+        //int tZwrot = t0;
         System.out.println("wyswietlam kolejne elementy tablicy ");
         System.out.println();
         for (int i = 0; i < tn.length; i++) {

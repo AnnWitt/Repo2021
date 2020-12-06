@@ -131,7 +131,19 @@ class PrzykladVarargs {
     public static void main(String[] args) {
         System.out.println("metodą statyczną int");
         Zaczyty.TblVarargs(2,5,6,7,8);
-        System.out.println();
+        Zaczyty.TblVarargs(1,2,3);
+
+        int[] KopiaTblVarargsClone=Zaczyty.TblVarargs(1,2,3).clone(); //!!!!!!!!!!!!!
+        int[] KopiaTblVarargsRownosc=Zaczyty.TblVarargs(1,2,3);//.clone(); //!!!!!!!!!!!!!
+
+        //Pytanie: czy ma tu znaczenie clone cyz =
+        KopiaTblVarargsRownosc[0]=100;
+        System.out.println("proba kopii tablicy z metody varargs klone  " + KopiaTblVarargsClone[2]);
+
+        System.out.println("drugi raz");
+        Zaczyty.TblVarargs(1,2,3);
+
+
 
 
 
