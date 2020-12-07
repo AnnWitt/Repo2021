@@ -1,5 +1,7 @@
 package BlokiTematyczne.Obiektowosc.Powtorki.Kolonia;
 
+import java.util.Scanner;
+
 public class KoloniaMain {
 
     public static void main(String[] args) {
@@ -19,9 +21,19 @@ public class KoloniaMain {
         System.out.println(" ma w tej chwili lat " + iza.getWiek());
         iza.setWiek(20);
         System.out.println("Za ile lat");
-        //Scanner scan=new Scanner(System.in);
-        // int zaIleLat= scan.nextInt();
-        int zaIleLat = 7;
+
+        Scanner scan=new Scanner(System.in);
+        boolean valid;
+        int zaIleLat= scan.nextInt();
+        //KoloniaKlasy.lataWalidacja(zaIleLat);
+
+        //wywolanie klasy walidującej poprawność danych
+        while (KoloniaKlasy.lataWalidacja(zaIleLat)==false) {
+            System.out.println("ponownie");
+            zaIleLat=scan.nextInt();
+        }
+
+        //int zaIleLat = 7;
         System.out.println("Iza za " + zaIleLat + " będzie miała " + iza.WiekPrzyszly(zaIleLat) + " lat");
         System.out.println("Będzie wtedy rok " + iza.WiekMinus(iza.WiekPrzyszly(zaIleLat)) + " wzrost " + iza.getWzrost());
 

@@ -33,6 +33,14 @@ public class KoloniaKlasy {
         return x;
     }
 
+    public static boolean lataWalidacja(int lata) {
+        if (lata>0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 
 
 

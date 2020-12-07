@@ -3,7 +3,7 @@ package BlokiTematyczne.Obiektowosc;
 import java.sql.SQLOutput;
 import java.util.ArrayList;
 
-public class Z1 {
+public class PrzykladArrayList {
     public static void main(String[] args) {
         //lista - ArrayList <typ danych>
         ArrayList<String> lista=new ArrayList();
