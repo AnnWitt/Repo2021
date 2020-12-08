@@ -1,4 +1,5 @@
-- Klasa jest szablonem konstrukcji obiektu.
+
+- klasa jest szablonem konstrukcji obiektu.
 - Obiekty są instancjami klasy
 - Zmienne i metody są składowymi klasy
 - Sens wywolywania z maina innej klasy - teoretycznie moznaby wywolywac z wielu innych klas obiekty tej klasy.
@@ -106,8 +107,31 @@ OuterClass.InnerClass inst1=outerClass.instantiate(); //powstaje w wyniku wywoł
 OuterClass.InnerClass inst2=outerClass.new InnerClass(); //tworzymy posługując się instancją klasy OuterClass
 }
 
-Static/Nonstatic -> domyślnie, wszystkie wewnętrzne interfejsy i typy wyliczeniowe są statyczne,
-modyfikator static jest przed nimi zbędny
+Static/Nonstatic ->
+domyślnie, wszystkie wewnętrzne interfejsy i typy wyliczeniowe są statyczne,
+modyfikator static jest przed nimi zbędny. Static aby wywolywac przed wywolaniem dowolnego obiektu klasy
+ (uruchomiona zanim powstana obiekty).Samodzielna składowa której możemy używać bez konkretnego obiektu
+        System.out.println(KoloniaKlasy.ZeStatic); //zadziala bo statyczna
+        System.out.println(KoloniaKlasy.wiek); //nie zadziala bo niestatyczna
+
+    int wiek;
+    static String ZeStatic="dupa ale statyczna";
+    tak samo mozna wywolywac metody (bez obiektu).
+    Zmienne static są poniekąd zmiennymi globalnymi, utworzenie obiektu nie powoduje powstania
+    kopii zmiennej static. Wszystkie obiekty klasy ją wspóldzielą (1:n). Zmiana jej wartosci
+    globalnie powoduje jej zmiane w każdym wykorzystaniu przez inne obiekty
+    non static są osobne dla kazdego obiektu np
+
+    xxx x=new xxx();
+    x.x1=liczba1
+    x.x2=liczba2
+
+
+Main jest static poniewaz musi zostac wywolana przez maszyne wirtualna javy w momencie
+uruchomienia programu
+Metody static moga bezposrednio wywolywac tylko inne metody static, bezposrednio uzywac
+tylko zmiennych skladowych static, nie maja referencji this
+
 
 https://www.samouczekprogramisty.pl/klasy-wewnetrzne-i-anonimowe-w-jezyku-java/
-//dalej 166 wiecej o metodach i klasach
+//dalej 184 wiecej o metodach i klasach
