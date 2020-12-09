@@ -131,7 +131,7 @@ class PrzykladVarargs {
     public static void main(String[] args) {
         System.out.println("metodą statyczną int");
         Zaczyty.TblVarargs(2,5,6,7,8);
-        Zaczyty.TblVarargs(1,2,3);
+        Zaczyty.TblVarargs(1,2,3); //xx
 
         int[] KopiaTblVarargsClone=Zaczyty.TblVarargs(1,2,3).clone(); //!!!!!!!!!!!!!
         int[] KopiaTblVarargsRownosc=Zaczyty.TblVarargs(1,2,3);//.clone(); //!!!!!!!!!!!!!

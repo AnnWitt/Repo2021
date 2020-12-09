@@ -6,6 +6,9 @@ public class KoloniaKlasy {
     int wiek;
     String kolorOczu;
     int wzrost;
+    int costam = 999;
+    //static String ZeStatic="dupa ale statyczna";
+    static String ZeStatic; //zwroci nulla ale spoko
 
     public KoloniaKlasy() {
     }
@@ -42,7 +45,22 @@ public class KoloniaKlasy {
     }
 
 
+public static int dupa(int n) {
+        int result=n;
+        while (n>0){
+            result*=n;
+            n--;
+        }
+        return result;
+}
 
+    public static int dupa2(int n) {
+        int result2=n;
+        while (--n>0){
+           result2*=n;
+        }
+        return result2;
+    }
 
 
 
@@ -78,5 +96,12 @@ public class KoloniaKlasy {
 
     public void setWzrost(int wzrost) {
         this.wzrost = wzrost;
+    }
+    public int getCostam() {
+        return costam;
+    }
+
+    public void setCostam(int costam) {
+        this.costam = costam;
     }
 }

@@ -37,12 +37,23 @@ public class KoloniaMain {
         System.out.println("Iza za " + zaIleLat + " będzie miała " + iza.WiekPrzyszly(zaIleLat) + " lat");
         System.out.println("Będzie wtedy rok " + iza.WiekMinus(iza.WiekPrzyszly(zaIleLat)) + " wzrost " + iza.getWzrost());
 
+        System.out.println("getter costam " + iza.getCostam());
+
         XxxZew x = new XxxZew();
         int wiekpl = x.TestZew() + 10;
         System.out.println(wiekpl);
         System.out.println("zewnetrzna, wewnetrzna, metoda w wewnetrznej (stała) " + XxxZew.XxxWew.TestWew());
         System.out.println("zewnetrzna, wewnetrzna,metoda w wewnetrznej odnoszaca sie do zewnetrznej " + XxxZew.XxxWew.WewKorzystazZewn());
 
+        System.out.println("static orzy zmiennej");
+        System.out.println(KoloniaKlasy.ZeStatic); //zadziala bo statyczna
+        //System.out.println(KoloniaKlasy.wiek); //nie zadziala bo niestatyczna
+
+
+        System.out.println("zadanie Adama");
+        //KoloniaKlasy.dupa(4);
+        System.out.println("dupa 1 " + KoloniaKlasy.dupa(4));
+        System.out.println("dupa 2 " + KoloniaKlasy.dupa2(4));
 
     }
 
