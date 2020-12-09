@@ -3,7 +3,7 @@ package BlokiTematyczne.Obiektowosc.Powtorki.OOP.pkg;
 import static java.lang.Math.min;
 
 import BlokiTematyczne.Obiektowosc.Caretaker.Animal;//import z innego pakietu
-import BlokiTematyczne.Obiektowosc.Samochod;
+import BlokiTematyczne.Obiektowosc.Powtorki.Samochod;
 
 public class Kalkulator {
     public static void main(String[] args) {

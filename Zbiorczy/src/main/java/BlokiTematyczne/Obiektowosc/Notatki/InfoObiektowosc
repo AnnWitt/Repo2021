@@ -73,7 +73,7 @@ Pakiet: grupa klas
 Wykorzystanie obiektu jako parametru:
 
 
-Sterta vs stos -!!!!!!!!!!!
+Sterta vs stos -!
 Sytuacja przypisania nowej instancji obiektu do istniejącej zmiennej - przepiecie do innego miejsca na stercie
 (referencja do nowego obiektu, innego miejsca w pamieci)
 - sterta (heap space) - obiekty trzymane są na stercie. Miejsce na obiekty są rezerwowane (i ew zwalniane) w tej pamieci.

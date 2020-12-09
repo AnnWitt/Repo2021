@@ -1,6 +1,4 @@
-package BlokiTematyczne.Obiektowosc;
-
-import BlokiTematyczne.Obiektowosc.Samochod;
+package BlokiTematyczne.Obiektowosc.Powtorki;
 
 import java.util.HashMap;
 

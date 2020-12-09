@@ -1,4 +1,4 @@
-package BlokiTematyczne.Obiektowosc;
+package BlokiTematyczne.Obiektowosc.Powtorki;
 
 public class Obiektowosc {
     public static void main(String[] args) {
