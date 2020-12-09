@@ -1,6 +1,4 @@
-package BlokiTematyczne.Obiektowosc;
-
-import BlokiTematyczne.Obiektowosc.Samochod;
+package BlokiTematyczne.Obiektowosc.Powtorki;
 
 public class Any {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package BlokiTematyczne.Obiektowosc;
+package BlokiTematyczne.Obiektowosc.Powtorki;
 
 public class Kalkulator {
     //nie ma zadnych danych, te metody powinny byc statyczne, nie ma zadnych danych w pamieci dlatego dodajemy
