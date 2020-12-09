@@ -1,4 +1,4 @@
-package BlokiTematyczne.Obiektowosc.Powtorki;
+package BlokiTematyczne.Obiektowosc;
 
 import java.sql.SQLOutput;
 import java.util.ArrayList;

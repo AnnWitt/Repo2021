@@ -1,4 +1,4 @@
-package BlokiTematyczne.Obiektowosc.Powtorki;
+package BlokiTematyczne.Obiektowosc;
 
 public class ObiektJakoParametrMetody {
 
