@@ -1,4 +1,4 @@
-package pl.sda.java47trene;
+package pl.sda.java47trener.BezPakietu;
 
 public class FightApp {
 

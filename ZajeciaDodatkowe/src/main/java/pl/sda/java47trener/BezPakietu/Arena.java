@@ -1,4 +1,4 @@
-package pl.sda.java47trene;
+package pl.sda.java47trener.BezPakietu;
 
 public class Arena {
 
@@ -14,7 +14,7 @@ public class Arena {
         //while(player.getHealth() > 0 && enemy.health > 0) { //zastapic <0 czyms innym
        // while(isLife(player.getHealth(), enemy.getHealth())) { //zabrane z innej metody
         //shouldfightcontinue
-        while(player.areYouAlive() && enemy.isItAlive()) { //zabrane z innej metody
+        while(player.areYouAlive() && enemy.isItAlive()) { //zabrane z innej metody //boolean souldFightContinue()
             player.showHealth();
             //System.out.println("Player: " + player.getHealth() + "HP");
             //System.out.println("Enemy: " + enemy.getHealth() + "HP");

@@ -133,3 +133,9 @@ używac dir zamiast ls -la
 
 ##usuwanie repozytorium / katalogu ##
 rm -rf .git
+
+##GIT dodatkowe info##
+do git ignore walto dodac .idea/
+out/
+*.iml
+---> bedzie dotyczyło kolejnych commitów, aby łapalo trzeba by najpierw rm na tych plikach zrobic

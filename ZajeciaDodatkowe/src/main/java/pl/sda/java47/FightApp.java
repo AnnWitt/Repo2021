@@ -1,6 +1,6 @@
 package pl.sda.java47;
 
-import pl.sda.java47trene.Arena;
+import pl.sda.java47trener.MetodyPakietowe.arena.Arena;
 
 public class FightApp {
     public static void main(String[] args) {
