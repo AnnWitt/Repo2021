@@ -201,47 +201,50 @@ class SRW6 {
 
     public static void main(String[] args) {
 
+/*        do {
+            System.out.println("Czy chcesz zakończyć działanie programu");
+            response= userInput.next();
+        } while (response.toLowerCase().equals("nie"));*/
+
         Scanner userInput = new Scanner(System.in);
-        System.out.println("Wybierz figurę: 1 - kwadrat; 2 - prostokąt; 3 - koło; 4 - trójkąt; 5 - koniec");
-        int rodzaj = userInput.nextInt();
+        String repeat=null;
+
+
         double a = 0, b = 0, c = 0, r = 0;
+        boolean walidacja;
+        String rodzaj;
 
-        boolean walidacjaProgram=true;
+        do {
+            System.out.println("Wybierz figurę: 1 - kwadrat; 2 - prostokąt; 3 - koło; 4 - trójkąt. Aby zakończyć wpisz 'koniec' ");
+            rodzaj= userInput.next();
+            a = 0; b = 0; c = 0; r = 0;
 
-        if (rodzaj==5) {
-            walidacjaProgram=false;
-        }
-
-        boolean walidacjaTyp;
-
-        while (walidacjaProgram == true) {
-
-            if (rodzaj == 1 || rodzaj == 2 || rodzaj == 3 || rodzaj == 4) {
-                walidacjaTyp = true;
+            if (rodzaj.equals("1") || rodzaj.equals("2") || rodzaj.equals("3") || rodzaj.equals("4")|| rodzaj.equals("koniec")) {
+                walidacja = true;
             } else {
-                walidacjaTyp = false;
+                walidacja = false;
             }
 
-            while (walidacjaTyp == false) {
+            while (walidacja == false) {
                 System.out.println("Niepoprawny numer figury: wybierz ponownie");
-                rodzaj = userInput.nextInt();
-                if (rodzaj == 1 || rodzaj == 2 || rodzaj == 3 || rodzaj == 4) {
-                    walidacjaTyp = true;
+                rodzaj = userInput.next();
+                if (rodzaj.equals("1") || rodzaj.equals("2") || rodzaj.equals("3") || rodzaj.equals("4")|| rodzaj.equals("koniec")) {
+                    walidacja = true;
                 } else {
-                    walidacjaTyp = false;
+                    walidacja = false;
                 }
             }
 
-            while (walidacjaTyp == true) {
+            while (walidacja == true && !rodzaj.equals("koniec")) {
                 switch (rodzaj) {
-                    case 1:
+                    case "1":
                         while (a <= 0) {
                             System.out.println("podaj dodatnią długość boku kwadratu");
                             a = userInput.nextDouble();
                         }
                         System.out.println("Pole kwadratu wynosi: " + a * a + " Obwód kradratu wynosi: " + 4 * a);
                         break;
-                    case 2:
+                    case "2":
                         while (a <= 0) {
                             System.out.println("podaj dodatnią długość pierwszego boku prostokata");
                             a = userInput.nextDouble();
@@ -252,14 +255,14 @@ class SRW6 {
                         }
                         System.out.println("Pole prostokąta wynosi: " + a * b + " Obwód prostokąta wynosi: " + ((2 * a) + (2 * b)));
                         break;
-                    case 3:
+                    case "3":
                         while (r <= 0) {
                             System.out.println("Podaj dodatni promień koła");
                             r = userInput.nextDouble();
                         }
                         System.out.println("Pole koła wynosi: " + Math.PI * r * r + " Obwód koła wynosi: " + 2 * Math.PI * r);
                         break;
-                    case 4:
+                    case "4":
                         while (a <= 0) {
                             System.out.println("podaj dodatnią długość pierwszego boku trójkąta");
                             a = userInput.nextDouble();
@@ -277,15 +280,17 @@ class SRW6 {
                         double P = Math.sqrt(p * (p - a) * (p - b) * (p - c));
                         System.out.println("Pole trójkąta wynosi: " + P + " Obwód trójkąta wynosi: " + (a + b + c));
                         break;
+                    case "koniec":
+                        System.out.println("zakonczono");
+                        break;
 /*                    default: //to się nigdy nie wydarzy
                         System.out.println("wprowadzono niepoprawną wartość");
                         walidacja=false;
                         break;*/
-                }
-                walidacjaTyp = false;
 
+                }
+                walidacja = false;
             }
-            walidacjaProgram=false;
-        }
+        }while (!rodzaj.equals("koniec"));
     }
-} //coś jeszcze nie tak --- zerknij na 3
+}
