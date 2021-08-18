@@ -1,0 +1,83 @@
+Instrukcja warunkowa
++1. Zadeklaruj dwie zmienne liczbowe (całkowite) i przypisz im wartości. Następnie wypisz wartość większej z nich.
+ Do sprawdzenia, która jest większa użyj instrukcji warunkowej.
++2. Sprawdź, czy wartość przypisana zmiennej jest parzysta, czy nie (wypisz w konsoli odpowiedni
+komunikat).
++3. Zadeklaruj dwie zmienne, jedna reprezentująca temperaturę (liczba całkowita), druga to wartość logiczna reprezentująca to, czy pada deszcz. Przypisz zmiennym wartości. Następnie wypisz w konsoli, czy pogoda jest ładna, czy nie, przy użyciu instrukcji warunkowej. Pogoda jest ładna, gdy temperatura jest większa lub równa 20 i gdy nie pada deszcz.
++4. Sprawdź, czy wartość zmiennej jest większa, mniejsza, czy równa zero (wyszukaj w sieci frazę "java else if").
++5. Zadeklaruj trzy zmienne liczbowe (całkowite) i przypisz im wartości. Następnie wypisz wartość największej z nich.
++6. Rozwiąż zadanie 1. dla czterech zmiennych.
+9:13
+Metody
++1. Stwórz metodę exercise1, która przyjmie dwa parametry typu int, a która zwróci wynik mnożenia tych parametrów.
++2. Stwórz metodę exercise2, która przyjmie dwa łańcuchy znaków jako parametry, a która zwróci ich konkatenację.
++3. Stwórz metodę exercise3, która przyjmie parametr typu int. Metoda zwróci odpowiedź na pytanie, czy wartość jest dodatnia.
++4. Stwórz metodę, która przyjmie dwa parametry typu String. Metoda zwróci dłuższy z tych tekstów. Jeśli oba są równej długości, metoda zwróci pierwszy z nich.
++5. Stwórz metodę, która zadziała tak jak w metoda z zadania 1., ale wynik policzy z wykorzystaniem wielokrotnego dodawania. Niech rozwiązanie zadziała dla liczb nieujemnych.
++6. Stwórz metodę, która przyjmie dwa parametry typu int, a która zwróci wynik potęgowania o podstawie i wykładniku takich, jak przekazano.
++7. Stwórz metodę, która przyjmie jako pierwszy parametr wartość typu String, a jako drugi znak. Metoda zwróci liczbę wystąpień znaku w łańcuchu.
++8. Popraw działanie metody z zadania 5 tak, aby zadziałała również dla liczb ujemnych.
++9. Stwórz metodę, która przyjmuje dwa łańcuchy jako parametry, a która zwraca informację, czy pierwszy łańcuch zawiera drugi.
++10. Stwórz metodę, która sprawdzi, czy jeden łańcuch znaków zawiera wszystkie znaki z drugiego łańcucha (jeden znak w pierwszym nie może reprezentować więcej niż jednego w drugim).
+
+switch, Random, while
+Rozwiązanie każdego zadania rozwiąż w osobnej klasie.
++1. Stwórz program, który poprosi użytkownika o podanie wartości liczbowej. Następnie program wypisze wszystkie liczby naturalne, aż do zadanej.
++2. Stwórz program, który poprosi użytkownika o podanie dwóch wartości - długości boków prostokąta. Następnie wypisze pole takiego prostokąta.
++3. Stwórz program, który będzie zadawał użytkownikowi pytanie "Czy chcesz zakończyć działanie programu", póki odpowiada "nie". Wygoogluj frazę "java String compare".
++4. Stwórz program, który wypisze w konsoli 10 losowych wartości z zakresu 15 - 25.
++5. Stwórz program, który spyta użytkownika o podanie figury, której pole chce policzyć:
+kwadratu, prostokąta, koła czy trójkąta. Następnie zgodnie z wyborem zada odpowiednie pytania o wymiary figury i wypisze jej pole oraz obwód.
+6. Zmodyfikuj rozwiązanie poprzedniego zadania tak, aby pytanie o figurę było powtarzane, póki użytkownik nie poda zamiast figury "koniec".
+
+
+7.1 Stwórz metodę, która zada użytkownikowi 6 pytań o liczbę skreślaną na kuponie. Wartości podawane przez użytkownika będą kolejnymi elementami tablicy, którą metoda zwróci.
+7.2 Stwórz metodę, która zwraca tablicę sześcioelementową - wynik losowania lotto (wartości 1 - 49).
+7.3 Metodę losującą zmodyfikuj tak, aby zwracała tablicę o różnych rozmiarach.
+7.4 Stwórz metodę sprawdzającą, czy tablica intów zawiera zadany element.
+7.5 Stwórz metodę zwracającą, ile elementów jednej tablicy znajduje się w drugiej.
+7.6 Użyj kolejno stworzonych metod, aby zasymulować losowanie lotto - użytkownik dostanie odpowiedź - ile liczb poprawnie "skreślił".
+7.7 Zmodyfikuj aplikację tak, aby losować dopóki nie zostanie wylosowana wartość prawdziwa (oczywiście tych losowań może być sporo, więc moze być potrzeba uzbrojenia się w cierpliwość ;)).
+9:14
+Rekursja:
+Zadania rozwiązujemy z wykorzystaniem rekursji
+1. Stwórz metodę power (potęgowanie), która przyjmie dwa inty. Metoda zwróci pierwszy argument podniesiony do drugiego argumentu.
+a^b = a * a^(b-1), gdy b > 0
+a^b = 1, gdy b = 0
+2. Stwórz metodę sum, która przyjmie jako parametr wartość typu int. Metoda zwróci sumę liczb naturalnych aż do zadanej.
+3. Stwórz metodę fibonacci, która przyjmie argument - indeks wyrazu, a która zwróci wartość zadanego wyrazu w ciągu Fibonacciego.
+4. Stwórz metodę isPalindrome, która sprawdzi, czy łańcuch znaków jest palindromem.
+5. Rozwiąż zadanie 3 sposobem iteracyjnym.
+
+Mariusz Tarnowski  9:33 AM
+was added to #java-podstawy by Tomasz Ginszt.
+
+[TRENER] Rafal Kapsa  9:45 AM
+Zadanie polega na znalezieniu brakującej liczby w tablicy. Np. [1,2,3,4,6] odp 5, jeżeli w tablicy nie brakuje zadnego elementu zwróć -1. Tablica może być do 100 elementów. Rozważ w późniejszym etapie znalezienie wszystkich brakujących elementów. W wariancie trudniejszym tablica będzie nie posortowana, czyli [6,3,2,1,4], mogą wystąpić również duplikaty np. [1,1,3,2,4,6]
+New
+
+[TRENER] Rafal Kapsa  11:37 AM
+Tablice
+1. Napisz metodę print, która wypisze w konsoli elementy tablicy intów, przekazanej jako parametr.
+2. Napisz metodę getSecondElement, która przyjmuje parametr - tablicę intów, a która zwróci wartość drugiego elementu tej tablicy.
+3. Napisz metodę printReversed, która wypisze w konsoli elementy tablicy intów, przekazanej jako parametr, rozpoczynając od ostatniego elementu.
+4. Napisz metodę getMax, która przyjmie za parametr tablicę intów, a która zwróci największą wartość z tej tablicy.
+5. Napisz metodę getMin, która zwróci najmniejszy element przekazanej tablicy intów.
+6. Napisz metodę getSum, która przyjmie za parametr tablicę intów, a któa zwróci sumę jej elementów.
+7. Napisz metodę getLarger, która przyjmie za parametry dwie tablice intów, a która zwróci tę tablicę, której suma elementów jest większa.
+8. Napisz metodę getMaxMinAndSum, która przyjmie za parametr tablicę intów, a która zwróci tablicę trzyelementową, której pierwszy element to wartość największa, drugi to najmniejsza, a trzeci suma wszystkich elementów.
+9. Napisz metodę merge, która za parametry dwie tablice intów, a która zwróci tablicę, która zawierać będzie wszystkie elementy z jednej i drugiej tablicy.
+10. Napisz metodę getDistinct, która za parametr przyjmie tablicę, a która zwróci tablicę, w której będą elementy bez powtórzeń z tablicy przekazanej w parametrze.
+11. Napisz metodę decomposeToPrimeFactors, która przyjmie jako parametr wartość typu int, a która zwróci tablicę czynników pierwszych argumentu (łącznie z 1, dla wartości większych od zera, łącznie z -1 dla wartości od zera mniejszych).
+
+[TRENER] Rafal Kapsa  12:08 PM
+Odpowiedź do zadania specjalnego:
+private List<Integer> findNumber(int[] array){
+    Set<Integer> arraySet = Arrays.stream(array).boxed().collect(Collectors.toSet());
+    int max = arraySet.stream().max(Integer::compare).get();
+    List<Integer> foundNumbers = IntStream.range(1, max)
+            .boxed()
+            .filter(number -> !arraySet.contains(number))
+            .collect(Collectors.toList());
+    return foundNumbers.isEmpty() ? Collections.singletonList(-1) : foundNumbers;
+}
