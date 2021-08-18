@@ -1,0 +1,205 @@
+short = 2 bajty 16 bitów od -32768 do +32768
+int 4 bajty
+long 8 bajtów 64 bity (czesto w bazach danych) (-2^63 - +2^63) dodajemy do liczby L np
+long zmiennaLong=10L;
+Long vs long - typ prymitywny a z wielkiej opakowane w obiekt. przy OBiekcie Long
+musi być to L, przy prymitywnym zadziała. Do obiektu można przypisać nulla, do prymitywnej
+nie mozna dodac wartosci nieoznaczonej (nulla)
+
+float/double typy zmiennoprzeciwnkowe
+float myFloatNumber=1.343424f; //f musi byc F lub f
+double myDoubleNumber=1.333d; //d musi byc D lub d
+
+        boolean myFalse=false;
+        boolean myTrue=true;
+        boolean myBoolean=myFalse && myTrue ; // true jeżeli obie będą true
+
+        && - and
+        || - or
+
+typ znakowy - char
+\t - tab
+\n - nowa linia
+\r - powrot karetki -> powrót do początku linii i nadpis (calości)
+
+char signValue='y';
+char tab='\t';
+np dp wyszukania znaku w kodzie
+
+String - typ łańcuchowy typ niemutowalny (nie moze byc zmieniany)
+
+operator += dodajemy podana wartosc i od razu przypisujemy
+i=10
+i+=20 //i =30
+
+% reszta z dzielenia
+
+post i preinkretementakcja
+int x=5;
+sout x++ ->5 wypisane - zwiekszenie po wypisaniu
+sput ++x ->6 zwiekszenie przed wypisaniem
+
+== rowne
+!= rozne
+! ->negacja np!(bot1||bot2)
+
+Konwersja typów
+niejawna - bbez konwersji , bez (int)
+int i =25 -> float j=i; int na float //cho tu moze byc strata przy duzych wartosciach
+
+rzutowanie - konwersja z mozliwoscia utraty (jawne z (int))
+(typ) zmienna np
+double n=99.98
+int m=(int) n; ---> 99
+int m2= (int) mMath.round(n) --->100
+
+instrukcje sterujace
+1f (warunek) {inst1} else {instr2}
+if (warunek1) {instr1} else if (warunek2) {instr}
+... elseif moze byc duzo ... else {instr3}
+
+switch (zmienna) {
+    case wartosc1
+    kod jezeli prawda
+    break; //bez break pojdzie dalej i wywola np defaulta
+    case wartosc2
+    default
+}
+
+petle
+for, while, dowhile
+
+for(deklaracja licznika; warunek; modyfikacja){}
+for (int i=0;i<10;i++) {cos}
+
+for (int i=1; i<=50;i=i+5)
+
+for each po tablicach
+ String[] imiona = {"Ala", "Adam", "Amdrzej","Ola","Pawel","Ewa"};
+        for (String imie : imiona) {
+            System.out.println("Imie: " + imie);
+
+
+            While (warunek) {instrukcja}
+
+            int i=0
+            while (i<10) { sout (i);
+            ++i;)
+
+
+do { instrukcja } while (warunek)
+wykona sie przynajmniej raz a nastepnie sprawdzi warunek
+        String[]imiona={"imie1", "imie2","imi3"} ;
+        int i= imiona.length;
+        int index=0;
+        do {
+            System.out.println(imiona[index]);
+            i++;
+        }
+        while (i< imiona.length);
+
+        warunek nigdy nie jest prawdziwy ale zdazył juz jeden raz wyswietlic
+
+        break; - przerwanie petli aby nie mieliło dalej
+
+            private static void przykladBrak() {
+                for (int i=0; i<10;i++) {
+                    if (i==3) {break;} --> konczy
+                        System.out.println(i);
+                }
+            }
+
+            private static void przykladContinue() {
+                for (int i=0; i<10;i++) {
+                    if (i==8) {continue;} //wyswietli bez 8
+                    System.out.println(i);
+                }
+            }
+
+Klasa String
+- literał String myTekstPrimit="tekst";
+- konstruktor String myTextkonstr = new String("text2"); //z tego mozna null przypisac, do prymitywnego nie
+
+klasa stirng niemutowalna - powstaje nowy string. nie posiada metoddy ()np setter)
+
+        System.out.println(text1==text2); //true
+        System.out.println(text2==text3); //false
+        System.out.println(text1==text3); //ctrl d na koncu wiersza //false
+        System.out.println(text1.equals(text2)); //true
+        System.out.println(text1.equals(text3)); //true
+
+        == -? equals -> roznica - w 1 czy ta sama referencja, druga sprawdzanie stricte wartosci
+        zasadniczo dla Stringów korzystamy z equals dla porównan
+
+API serwis zewnętrzny - googlnij restful api
+
+   //String - konkatenacjia napisów
+
+        System.out.println(text1+text2);
+         ....  (text.concat(text2))
+
+         indexof - pozycja pierwszego wystapienia iagu no test.indexof("is")
+
+         text.replaceAll("a","o")) podmiana a na o
+
+
+Wejscie/wyjscie
+
+Scanner skan=new Scanner(System.in)
+String textwczutany=skan.nextline()
+nextInt, Double, Boolean
+
+printf() z formatowaniem
+
+e,f,x,o,s,c,b np printf(44,2) z 2 miejscami po przecinku
+
+Metody - grupy instrukcji
+moze zawierac argumenty lub nie
+int diff(int arg1,int arg2) {
+return arg1-arg2;
+}
+mozna zamiast listy wybrac obiekt
+
+void nie zwraca nic, jak no int to musi byc return
+
+void + return to np return jezeli jakis warunek spelniony. Return pelni funkcję breaka
+
+Tablice
+
+jedno/wielowymiarowe - rozmiar powinien byc staly
+
+typ[] nazwa=new typ[liczba elementow]
+
+String[] array=new String[]{"w1","w2,"w3"}
+
+array[2]="ddd"; (dp 3 komorki tablicy)
+
+array.lenght - wierszy
+arrau[i].lenght - ile kolumn
+
+tablice z tablicami (obiekty)
+
+typ[][]tablicaWiel
+tablicaWiel= new typ[l wierszy][l kolumnn] np new String[2][];
+tablicaWiel[0]=new String[]{"ddd","www"}; pierwszy wiersz
+tablicaWiel[1]=new String[]{"dd2d","w2ww"}; drugi wiersz
+
+Inny zapis warunku
+return foundNumbers.isEmpty() ? Collections.singletonList(-1) : foundnumbers
+
+if (foundNumbers.isEmpty()) {
+    return Collections.singletonList(-1) ;
+} else {
+    return foundnumbers;
+}
+
+
+        if (liczba1>liczba2) {
+            m1=liczba1;
+        } else {
+            m1=liczba2;
+        }
+
+        m2 = liczba3>liczba4 ? liczba3: liczba4;
+
+UWAGI - ENUM/CLASS ROZNICA
