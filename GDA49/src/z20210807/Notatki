@@ -203,3 +203,14 @@ if (foundNumbers.isEmpty()) {
         m2 = liczba3>liczba4 ? liczba3: liczba4;
 
 UWAGI - ENUM/CLASS ROZNICA
+
+
+TABLICA WYWOLANA Z METODY DO UZYCIA
+    static int[] tablica () {
+        int[] tblTest=new int[]{3,5,6,7,2};
+        return tblTest;
+    };
+
+    A MAIN
+    int[] x=tablica();
+            System.out.println(x[2]);
