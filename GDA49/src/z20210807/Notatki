@@ -339,4 +339,42 @@ implementujemy klasami Pattern i Matcher
 
 Pattern pattern=Pattern.compile("a+bcd")
 Matcher matcher=pattern.macher
+ Na przykład wyrażenie regularne \d{2}-\d{3} opisuje zbiór kodów pocztowych w Polsce.
 
+Klasa Matcher posiada, między innymi, następujące metody:
+
+find() – metoda zwraca true jeśli w łańcuchu znaków znajduje się coś co pasuje do wyrażenia regularnego,
+matches() – metoda zwraca true jeśli łańcuch znaków pasuje w całości do wyrażenia regularnego.
+https://www.samouczekprogramisty.pl/wyrazenia-regularne-w-jezyku-java/
+
+wyrażenia regularne mogą zawierać zwykłe literały znakowe, na przykład kot czy pies to poprawne wyrażenie regularne.
+Jednak są znaki, które interpretowane są w specjalny sposób. Wyrażenie takie jak 1 + 2 = 3 zawiera jeden ze znaków
+specjalnych – znak +. W związku z tym, jeśli znak + chcemy interpretować dosłownie musimy poprzedzić go znakiem \, wówczas
+pomijamy jego specjalne znaczenie. W takim przypadku otrzymasz wyrażenie regularne 1 \+ 2 = 3.
+
+W języku Java wyrażenia regularne zapisujemy używając typu String. Znak \ jest w literałach znakowych traktowany
+specjalnie (podobnie jak w samych wyrażeniach regularnych). Na przykład literał znakowy "\t" oznacza znak tabulacji,
+więc przy zapisie "1 \+ 2 = 3" kompilator Javy doszukiwałby się specjalnego znaczenia dla "\+" (podobnie jak przy "\t") a
+nie o to nam tutaj chodzi. Dlatego właśnie w języku Java w wyrażeniach regularnych musimy „dublować” każdy ukośnik
+
+Znak ? oznacza – element znajdujący się wcześniej jest opcjonalny. Innymi słowy to co występuje przed ? może wystąpić
+raz lub może zostać pominięte. Na przykład do wyrażenia regularnego kr?at pasują zarówno "krat" jak i "kat" ale nie
+pasuje "kot" czy "krrat".
+
+Znak * oznacza – powtórz dowolną liczbę razy element znajdujący się wcześnie
+
+Znak + jest podobny do *. Oznacza on, że występujący przed nim element musi być powtórzony 1 lub więcej razy
+
+Poza znakami ?, + i *, które określają dopuszczalną liczbę powtórzeń możesz też użyć {}. Jednak {} ma większe możliwości:
+{x} – oznacza że element poprzedzający musi wystąpić dokładnie x razy,
+{x,} – oznacza, że element poprzedzający musi wystąpić co najmniej x razy,
+{x,y} – oznacza, że element poprzedzający musi wystąpić od x do y razy.
+Zauważ, że symbole ?, * i + możemy zastąpić {}. Na przykład wyrażenia regularne al*a i al{0,}a czy al+a i al{1,}a są
+sobie równoznaczne. Jednak zapis z ?, + czy * jest krótszy przez co częściej stosowany.
+
+np a{2,3}b{4,9}c{1,9} itd
+
+
+Znak .Permalink
+Znak oznacza dowolny symbol (poza znakiem nowej linii). Innymi słowy do wyrażenia regularnego ko.ek pasują zarówno
+ "kotek" jak i "korek" ale nie pasuje "koek" czy "ktek".

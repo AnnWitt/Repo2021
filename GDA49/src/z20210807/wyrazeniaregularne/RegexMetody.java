@@ -13,4 +13,13 @@ public class RegexMetody {
         System.out.println(matcher.matches());
     }
 
+    static void RegexZ2 (String tekst) {
+        //2. Sprawdź, czy tekst składa się wyłącznie z małych znaków angielskiego alfabetu.
+
+
+    }
+
+
 }
+
+
