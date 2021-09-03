@@ -363,6 +363,33 @@ pasuje "kot" czy "krrat".
 
 Znak * oznacza – powtórz dowolną liczbę razy element znajdujący się wcześnie
 
+Znak + jest podobny do *. Oznacza on, że występujący przed nim element musi być powtórzony 1 lub więcej razy
+
+Poza znakami ?, + i *, które określają dopuszczalną liczbę powtórzeń możesz też użyć {}. Jednak {} ma większe możliwości:
+{x} – oznacza że element poprzedzający musi wystąpić dokładnie x razy,
+{x,} – oznacza, że element poprzedzający musi wystąpić co najmniej x razy,
+{x,y} – oznacza, że element poprzedzający musi wystąpić od x do y razy.
+Zauważ, że symbole ?, * i + możemy zastąpić {}. Na przykład wyrażenia regularne al*a i al{0,}a czy al+a i al{1,}a są
+sobie równoznaczne. Jednak zapis z ?, + czy * jest krótszy przez co częściej stosowany.
+
+np a{2,3}b{4,9}c{1,9} itd
 
 
+Znak .Permalink
+Znak oznacza dowolny symbol (poza znakiem nowej linii). Innymi słowy do wyrażenia regularnego ko.ek pasują zarówno
+ "kotek" jak i "korek" ale nie pasuje "koek" czy "ktek".
 
+
+ Takie często używane klasy zostały wbudowane w wyrażenia regularne pod postacią predefiniowanych klas. Wszystkie predefiniowane klasy prezentuje lista poniżej:
+ \d – jakakolwiek cyfra [0-9],
+ \D – jakikolwiek znak, który nie jest cyfrą [^0-9],
+ \w – znak używany w słowach [a-zA-Z0-9_] (zauważ, że mamy tu znak _),
+ \W – jakikolwiek znak, który nie jest używany w słowach [^a-zA-Z0-9_],
+ \s – tak zwane białe znaki czyli znak spacji czy tabulacji [ \t\n\r\f\x0B]. Możesz je opisać jako znaki, które nie są widoczne podczas wydruku,
+ \S – negacja grupy \s czyli [^ \t\n\r\f\x0B]
+
+
+         String ciagZnakowWzorzec="[a-z]+";
+         Pattern wzorzec=Pattern.compile(ciagZnakowWzorzec);
+         Matcher dopasowanie= wzorzec.matcher(ciagZnakow);
+         System.out.println(" Dla ciągu znaków " + ciagZnakow + ": "+ dopasowanie.matches());

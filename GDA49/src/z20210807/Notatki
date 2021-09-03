@@ -378,3 +378,18 @@ np a{2,3}b{4,9}c{1,9} itd
 Znak .Permalink
 Znak oznacza dowolny symbol (poza znakiem nowej linii). Innymi słowy do wyrażenia regularnego ko.ek pasują zarówno
  "kotek" jak i "korek" ale nie pasuje "koek" czy "ktek".
+
+
+ Takie często używane klasy zostały wbudowane w wyrażenia regularne pod postacią predefiniowanych klas. Wszystkie predefiniowane klasy prezentuje lista poniżej:
+ \d – jakakolwiek cyfra [0-9],
+ \D – jakikolwiek znak, który nie jest cyfrą [^0-9],
+ \w – znak używany w słowach [a-zA-Z0-9_] (zauważ, że mamy tu znak _),
+ \W – jakikolwiek znak, który nie jest używany w słowach [^a-zA-Z0-9_],
+ \s – tak zwane białe znaki czyli znak spacji czy tabulacji [ \t\n\r\f\x0B]. Możesz je opisać jako znaki, które nie są widoczne podczas wydruku,
+ \S – negacja grupy \s czyli [^ \t\n\r\f\x0B]
+
+
+         String ciagZnakowWzorzec="[a-z]+";
+         Pattern wzorzec=Pattern.compile(ciagZnakowWzorzec);
+         Matcher dopasowanie= wzorzec.matcher(ciagZnakow);
+         System.out.println(" Dla ciągu znaków " + ciagZnakow + ": "+ dopasowanie.matches());
