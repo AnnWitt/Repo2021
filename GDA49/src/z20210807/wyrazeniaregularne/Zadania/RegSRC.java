@@ -127,7 +127,7 @@ public class RegSRC {
 
     static void czyEmail (String tekst) {
         System.out.print("Zad 10. Sprawdź, czy łańcuch znaków to adres email. ");
-        String tekstWzorzec="[\\w\\S]+[@]+[\\w]+[[.]\\w]+";
+        String tekstWzorzec="[\\w\\S]+[@]+[\\w]+[.\\w]+";
         Pattern wzorzec=Pattern.compile(tekstWzorzec);
         Matcher dopasowanie= wzorzec.matcher(tekst);
         System.out.println(" Czy "+ tekst + " może być adresem email? " + dopasowanie.matches());
