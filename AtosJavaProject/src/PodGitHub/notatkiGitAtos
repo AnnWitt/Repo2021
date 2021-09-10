@@ -94,3 +94,154 @@ git stash
 list lista zapisanych zmian w schowky
 apply ponowne nalozenie zmiany, tylko itegtuje, nadal beda na liscie
 pop naklada zmiany i usuwa z listy
+
+//////////////////////////////////////////////////////////////////////////////////
+##Repozytoria zdalne + Laczenie z repozytorium zdalnym##
+wyświetlenie wszystkich skonfigurowanych serwerów -> git remote , git remote -v dodatkowo
+wyswietla źródło (ściezke)git
+
+https://gitlab.com/rafkapsa/java-podstawy/-/tree/main/out/production/Java%20podstawy/itneo
+
+…or create a new repository on the command line
+echo "# Projekt_Zbiorczy" >> README.md
+git initikp
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/AnnWitt/Projekt_Zbiorczy.git
+git push -u origin main  //Origin to nazwa repo remote np git remote add test2Github
+https://github.com/AnnWitt/Repo2.git
+
+git remote add trenerPodstawy https://gitlab.com/rafkapsa/java-podstawy/-/tree/main/out/production/Java%20podstawy/itneo
+git remote add TrenerPodstawy https://gitlab.com/rafkapsa/java-podstawy/-/tree/main/
+
+…or push an existing repository from the command line
+git remote add origin https://github.com/AnnWitt/Projekt_Zbiorczy.git
+git branch -M main (nie wiem czy potrzebne)
+git push -u origin main (nie wiem czy potrzebne)
+git status
+
+## Dodawanie usera ##
+$ git config --global user.name "Kursant SDA"
+$ git config --global user.email kursant@sda.pl
+git config --list ## podgląd
+
+## Tworzenie repozytorium ##
+Inicjalizacja Gita w istniejącym katalogu -> git init
+lonowanie istniejącego repozytorium -> git clone [url]
+
+##Stany plików w repozytorium##
+1. Sledzone - między innymi niezmodyfikowane, zmodyfikowane, w poczekalni
+2. Niesledzone - wszystkie pozostałe, nie znajdują się w poczekalni, są one gotowe do zatwierdzenia.
+
+##Poczekalnia zmiany##
+- rozpoczęcie śledzenia nowego pliku (przeniesienie pliku do poczekalni) -> git add nazwa_pliku
+- commit - zatwierdzanie zmian z plików śledzonych -> git commit -m "treść wiadomości"
+- zatwierdzanie zmian z pominięciem poczekalni
+- usuwanie plików - wyrzucić z grupy plików śledzonych oraz następnie zatwierdzić zmiany (git rm)
+
+##Zmiana nazwy pliku#
+- git mv nazwa1.txt nazwa2.txt -> zmiana nazwy pliku
+
+##Lista zmian##
+- zwrócenie informacji, które dokładnie linie zostały dodane, a które usunięte: git diff
+- wyświetlenia szczegółowych informacji, które do poczekalni trafiły: it diff --staged
+
+##Wykluczenie plików z repozytorum -> .gitignore ##
+np: out/ (caly katalog),*.txt , ddd.txt, rozpoczęcie "!" oznacza negację
+
+##Historia rewizji##
+git log
+git log --oneline --graph
+
+##Znak końca linii##
+https://devkr.pl/2019/07/25/lf-will-be-replaced-by-crlf/
+https://stackoverflow.com/questions/5834014/lf-will-be-replaced-by-crlf-in-git-what-is-that-and-is-it-important
+https://stackoverflow.com/questions/17628305/windows-git-warning-lf-will-be-replaced-by-crlf-is-that-warning-tail-backwar/38112001
+
+##Cofanie zmian (Zmiana nazwy)##
+-> Poprawienie commitu np nazwy albo pominietych plików: git commit --amend
+Mozna tez bez edytora git commit --amend -m "Nowy opis"
+Jeżeli jest już na serwerze: git push <remote> <branch> -f / --force (na siłę, force)
+- UWAGA -> Wysyłanie zmian metodą siłową powoduje nadpisanie gałęzi na serwerze waszą lokalną gałęzią.
+jeśli nie macie jakiegoś commit-a u siebie lokalnie bo kolega chwilę po was coś wysłał to zostanie to utracone.
+
+##Usuwanie plików z poczekalni##
+it reset HEAD <file>  -> nie cofa zmian w zmodyfikowanym pliku, jedynie usuwa pliki z poczekalni
+
+##Cofanie zmian w zmodyfikowanym pliku##
+przywrócenie do stanu z ostaniego commita, w którym zostały zmodyfikowane. -> git checkout -- <file>
+
+##Tagi##
+Etykietowanie releasów. Wyswietlamy - git tag , Tworzymy git tag [nazwa-etykiety], git tag -a v1.4 -m 'my version 1.4' //z opisaniem etykiety
+np P1.1 , P1.2, P1.3 ,P2.1, P2.2 -> dwa tagi mozna zrobic P1 i P2
+wyszukanie git tag -l P1.*
+Domyślnie, polecenie git push nie przesyła etykiet do zdalnego repozytorium. Trzeba je wysłać jak brancha -> git push origin [nazwa-etykiety].
+Etykietowanie starych commitów:  git tag -a v1.2 9fceb02 (-a to etykieta opisowa, bez -m i'opis' otworzy się edytor)
+
+##Aliasy##
+Skroty polecen. UStawia się w pliku konfigruacyjnym np
+$ git config alias.co checkout
+$ git config alias.br branch
+potem się je wywoluje jako np co, br
+
+##Scalanie\pobieranie zmian z repozytoriów zdalnych"
+Pobieranie danych ze zdalnego repozytorium  (ale bez scalenia) -> git fetch [remote-name]
+Jeżeli chcemy pobrać i scalić to -> git pull (wykonuje fetch a potem merge)
+wysyłanie zatwierdzonych zmian -> git push [nazwa-zdalnego-repo] [branch] np git push origin master
+
+##Zmiana nazwy/usuwanie repozytorium##
+Zmiana nazwy skrótu przypisanego do repozytorium zdalniego => git remote rename nazwa1 nazwa2
+Usunięcie odnośnika, skrótu, wszystkich referencji -> git remote rm nazwa2
+analogicznie usuwanie katalogow git rm katalog
+
+##Przegladanie repozytoriów##
+Dodatkowe info: -> git remote show [nazwa repo]
+gitgit
+##Branche/Gałęzie - podstawowe operacje##
+Tworzenie nowej -git> git branch nazwa (bez przelaczenia) lub  git checkout -b nazwa_gałęzi (od razu z przelaczeniem na ta galaz tj przesunieciem HEAD).
+HEAD info o galezi na ktorej znajduje sie uzytkownik. Sprawdzenie gdzie jest HEAD -> git log --oneline --decorate
+- Przelaczanie git checkout nazwa.
+- Lista lokalnych galezi: -> git branch , git branch -v doda info o aktualnych rewizjach, git branch -r wyswietli zdalne
+- scalenie: git branch --merged / git branch --no-merged  -> lista galezi scalonych lub nie z aktywną galezia
+- usuwanie galezi -> git branch -d nazwa (trzeba byc na innej)
+
+##Scalanie\merge galezi##
+- scalenie - git merge -> wywolane z galezi docelowej (do niej chcemy domergowac). Np bedac na master robimy git merge nowafunkcjonalnosc
+- Scalenie Fast Forward: na galezi master utworzono np hotfix. Na hotfixie cos zrobiono i jest on domergowany do mastera. Jest "wspólny przodek", brak rozwidlen do scalenia
+- Scalenie trójstronne - gdy dochodzi do rozszczepienia galezi tj z mastera utworzono galaź na której coś zrobiono i zrobiono cos rownież na masterze. Master ma
+dodatkowy commit, którego nie ma nowoutworzonej galezi. Master w tym momencie nie jest już bezpośrednim "przodkiem"
+
+##Konflikty przy mergach (ten sam plik zmieniany na dwóch branchach##
+Jeżeli mamy jeden plik modyfikowany przez obie, zmiana nie zostanie zatwierdzona (caly proces wstrzymano). W git status pliki, które spowodowały konflikt są jako unmerged.
+Po otwarciu pliku mamy widoczne roznice do recznego skorygowania. Wtedy mozna puscic dalej
+
+##Powrot do starego commita##
+- powrót do starego commita -> git checkout <sha1>
+- modyfikować trzy ostatnie commity wybieramy : git rebase -i head~3 i otwiera się edytor w ktorym mozemy cos wykosic (pick/edit/squash)
+Usunięcie commita z listy spowoduje wykasowanie go (oczywiście wraz z wprowadzonymi przezeń zmianami) z historii.
+Przeniesienie w górę/w dół to modyfikacja jego miejsca w historii. Zmiana “pick” na “s” to doklejenie commita do poprzedniego
+(można jednocześnie przenieść commit w czasie i dokleić go do innego!). A “e” sprawi, że w proces modyfikacji zatrzyma się na etapie aplikowania
+tej właśnie zmiany dając nam możliwość dowolnej jej modyfikacji poprzez przedstawiony wyżej commit –amend.
+po zmianach -> git rebase --continue
+
+##Rebase##
+- git rebase master -> nasza aktualna gałąź, oryginalnie odchodząca od jakiegoś punktu w przeszłości gałęzi master, będzie od teraz
+widoczna jako odgałęzienie wyprowadzone z jej jej aktualnego HEADa.
+Można anulować poprzez git rebase --abort
+- git reset --hard orig_head Powrót do stanu sprzed zakończonego właśnie rebase (dziala tez na merge)
+
+##IntelliJ problemy z ls -la##
+https://stackoverflow.com/questions/49032646/ls-is-not-recognized-as-an-internal-or-external-command-operable-program-or-b?rq=1
+używac dir zamiast ls -la
+
+##usuwanie repozytorium / katalogu ##
+rm -rf .git
+
+##GIT dodatkowe info##
+do git ignore walto dodac .idea/
+out/
+*.iml
+---> bedzie dotyczyło kolejnych commitów, aby łapalo trzeba by najpierw rm na tych plikach zrobic
+
+
+https://java.pl.sdacademy.pro/e-podrecznik/git/git/
