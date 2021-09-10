@@ -1,3 +1,3 @@
 Dodaje wpis
 :wq
-
+robimy jakas naprawe utrzymaniowa
