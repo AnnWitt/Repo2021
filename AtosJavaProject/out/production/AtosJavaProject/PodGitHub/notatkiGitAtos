@@ -1,0 +1,69 @@
+ls - zawartosc katalogu
+mkdir stworz katalog
+touch stworz pusty plik
+mv przenies
+mv (plik.txt)  nazwakatalogu
+
+rm usun plik
+rm -r do usuniecia folderu
+cp skopiuj
+ls -la cala zawarto razem z ukrytymi
+ls --help
+bit branches
+status plikow ... utracked (nowy, zmiany nie sa sledzone), git add ,
+ status "changes to be commited" do zpaisu przy najblizszym commicie
+
+ git commit
+ git add .
+
+ vim plik.txt --- I .... potem :wq aby wyjsc (w write, q quit)
+
+git reset - wycofanie git add z pczekalni do working directory
+git checkout - przywraca do ostatniej postaci zapisanej przez git
+
+git rm usuniecie pliku
+wyciofanie usuniecia ze stage - git reset head nazwapliku.txt i potem jeszcze git checkout i nazwa pliku
+
+
+suma kontrolna SHA1
+
+git log - lista commitow
+
+-- patch zmiany w kazdym commicie
+-- stat
+-- oneline (w jednej linii)
+-- author="uzytkownik" --oneline --patch
+
+git log -3 (wyswietla 3 commity wstecz
+--graf historia w formie grafu
+--git log --oneline plik.txt (zmiany dot jednego pliku)
+wiecej w --help
+
+cofanie do wybranego commitu
+git checkout 611742c (ladujemy w odlaczonej glowie)
+powrot - git checkout master
+
+git revert <commit> - odwrocenie zmian w konternym comm
+git revert 1888da8 -> wycofanie tych zmian. zrobinowego commita
+
+zdalne repo
+
+git remote - nazwy
+-v dodatkowo url
+
+…or create a new repository on the command line
+echo "# Repo2021" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/AnnWitt/Repo2021.git
+git push -u origin main
+git6 remo
+…or push an existing repository from the command line
+git remote add origin https://github.com/AnnWitt/Repo2021.git
+git branch -M main
+git push -u origin main
+…or import code from another repository
+You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+
