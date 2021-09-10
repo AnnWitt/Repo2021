@@ -69,5 +69,12 @@ You can initialize this repository with code from a Subversion, Mercurial, or TF
 
 ---------------------------Po synchro-------------
 plik .gitignoregi
-dddddddddd
-dddd
+
+git branch
+git checkout (?)
+
+switch vs checkout
+
+
+Scalanie zmian, musimy być na branchu do ktorego vhcemy scalić zmiany (dobrac do niego zmiany)
+git merge NazwaBrancha
