@@ -81,3 +81,16 @@ git merge NazwaBrancha
 
 usuwanie brancha
 git branch-d nazwa
+
+rebase/merge
+
+rebase zamienia  // rebase-u mozliwosc zmia w commitach //mozliwosc okreslenia co bierzemy
+merge laczy
+
+
+stash - schowek, nie chcemy ich commitowac
+
+git stash 
+list lista zapisanych zmian w schowky
+apply ponowne nalozenie zmiany, tylko itegtuje, nadal beda na liscie
+pop naklada zmiany i usuwa z listy
