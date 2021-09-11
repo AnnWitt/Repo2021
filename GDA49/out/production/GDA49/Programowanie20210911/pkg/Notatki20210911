@@ -1,0 +1,11 @@
+https://pl.wikipedia.org/wiki/ASCII
+
+wyjątek na wypadek niewlasciwego formatu danych od usera
+
+System.out.printf("Hello %s!%n", "World");
+This produces the following output:
+
+Hello World!
+As shown above, the format string contains plain text and two
+formatting rules. The first rule is used to format the string argument.
+The second rule adds a newline character to the end of the string.

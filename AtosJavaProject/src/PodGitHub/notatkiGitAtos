@@ -96,6 +96,9 @@ apply ponowne nalozenie zmiany, tylko itegtuje, nadal beda na liscie
 pop naklada zmiany i usuwa z listy
 
 //////////////////////////////////////////////////////////////////////////////////
+
+po ssh git@github.com:AnnWitt/Repo2021.git
+
 ##Repozytoria zdalne + Laczenie z repozytorium zdalnym##
 wyświetlenie wszystkich skonfigurowanych serwerów -> git remote , git remote -v dodatkowo
 wyswietla źródło (ściezke)git
